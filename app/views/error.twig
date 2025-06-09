@@ -1,0 +1,7 @@
+{% extends 'layouts/error.twig' %}
+{% block body %}
+    <h1 style="font-size: 7rem !important;">{{ code ?? 500 }}</h1>
+    <p>
+        {{ message ?? '' }}
+    </p>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% set isProduction = true %}
+<!DOCTYPE html>
+<html data-bs-theme="auto" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#712cf9">
+    <title>{{ title }}</title>
+    {% include 'partials/head-scripts.twig'  %}
+    {% include 'partials/favicons.twig'  %}
+</head>
+<body class="bg-body-tertiary">
+<div class="container">
+        <div class="d-flex justify-content-center align-content-center">
+            <div class="d-flex justify-content-center flex-column min-vh-100">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+
+</div>
+</body>
+</html>

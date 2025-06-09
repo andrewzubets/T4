@@ -1,0 +1,30 @@
+{% macro input(
+    name,
+    label,
+    type = "text",
+    placeholder = '',
+    validated = false,
+    data = false
+) %}
+    {% set errorMessage = data.msg ?? '' %}
+    {% set isValid = errorMessage|length == 0 %}
+    {% set value = data.value ?? '' %}
+    {% set inputCssClass =  validated
+        ? (isValid ? 'is-valid' : 'is-invalid') : '' %}
+    {% set feedbackCssClass = validated
+        ? (isValid ? 'valid-feedback' : 'invalid-feedback') : '' %}
+    <div class="mb-3">
+        <label for="{{ name }}">{{ label }}</label>
+        <input type="{{ type  }}"
+               name="{{ name  }}"
+               id="{{ name }}"
+               class="form-control {{ inputCssClass }}"
+               value="{{ value }}"
+               placeholder="{{ placeholder }}" />
+        {% if validated %}
+            <div class="{{ feedbackCssClass }}">
+                {{ errorMessage }}
+            </div>
+        {% endif %}
+    </div>
+{% endmacro %}

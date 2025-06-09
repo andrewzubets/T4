@@ -1,0 +1,19 @@
+.az-nav-item-account{
+  display: flex;
+  gap: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  align-items: center;
+}
+
+.az-account-circle{
+  $width: 30px;
+  display: flex;
+  width: $width;
+  height: $width;
+  background-color: darkred;
+  background-image: url('/img/user.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100%;
+}

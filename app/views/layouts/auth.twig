@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#712cf9">
+    <title>{{ title }}</title>
+    {% include 'partials/head-scripts.twig'  %}
+    {% include 'partials/favicons.twig'  %}
+</head>
+<body class="auth-page">
+    <main class="form-auth w-100 m-auto">
+        {% block body %}{% endblock %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,4 @@
+/.idea
+/node_modules
+/app/config.mjs
+/app/storage/sessions.sqlite

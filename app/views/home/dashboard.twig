@@ -1,0 +1,16 @@
+{% extends 'layouts/default.twig' %}
+{% import "macros/html.twig" as html %}
+{% block body %}
+    <div class="container">
+        <h1 class="py-2">Users</h1>
+        <div>
+            <div id="react-app">
+                <div class="d-flex justify-content-center align-content-center">
+                    <p class="fs-1">Loading...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ frontScript('app_js') }}"></script>
+{% endblock %}

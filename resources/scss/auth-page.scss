@@ -1,0 +1,53 @@
+.auth-page {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-tertiary-bg-rgb), var(--bs-bg-opacity));
+
+  .form-auth {
+    max-width: 330px;
+    padding: 1rem;
+
+    .form-floating:focus-within {
+      z-index: 2;
+    }
+
+    .login-email {
+      margin-bottom: -1px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .login-password {
+      margin-bottom: 10px;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+  //
+
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem
+    }
+  }
+
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor
+  }
+
+
+}

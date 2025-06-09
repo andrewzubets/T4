@@ -1,0 +1,19 @@
+{% macro button(
+    cssClass,
+    label,
+    icon = '',
+    dataAz = ''
+    ) %}
+    {% set dataAzAttr = dataAz == '' ? '' : 'data-az="'~dataAz~'"' %}
+{% if icon == '' %}
+    <button type="button" class="btn {{ cssClass }}" {{ dataAzAttr }}>
+        {{ label }}
+    </button>
+{% else %}
+<button type="button" class="btn {{ cssClass }} az-btn-icon" {{ dataAzAttr }}>
+{#    {% include 'icons/' ~ icon ~ '.svg' %}#}
+    <span><img src="/img/icons/{{ icon }}.svg" alt="{{ label }}" width="16" height="16" /></span>
+    <span>{{ label }}</span>
+</button>
+{% endif %}
+{% endmacro %}

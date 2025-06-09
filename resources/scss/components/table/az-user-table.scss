@@ -1,0 +1,41 @@
+.az-user-table{
+  tr{
+    th:first-child,td:first-child {
+      padding-left: 1rem;
+      width: 20px;
+    }
+    th:last-child,td:last-child {
+      padding-right: 1rem;
+    }
+    cursor: pointer;
+  }
+  th, .az-cell-last-seen{
+    user-select: none;
+  }
+  .az-cell-email{
+    @media (max-width: 460px) {
+      font-size: 12px;
+    }
+  }
+  .az-cell-last-seen{
+    width: 180px;
+  }
+  .az-cell-full{
+    @media (max-width: 599.99px) {
+      display: none;
+    }
+  }
+  .az-cell-mobile{
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+}
+.badge {
+  &.az-status-blocked{
+    background-color: $red-400;
+  }
+  &.az-status-active{
+    background-color: $green-400;
+  }
+}

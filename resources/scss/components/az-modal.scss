@@ -1,0 +1,15 @@
+.az-modal {
+  &.show{
+
+      .modal{
+       display: block;
+      }
+      .modal-backdrop{
+        display: block;
+      }
+
+  }
+  &.hide{
+      display: none;
+  }
+}

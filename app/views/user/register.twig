@@ -1,0 +1,47 @@
+{% extends 'layouts/auth.twig' %}
+{% import "macros/form.twig" as form %}
+{% block body %}
+
+        <form method="POST" action="/user/register" >
+            <img class="mb-4" src="/img/logo.svg" alt="" width="72" height="57">
+            <h1 class="h3 fw-normal">Register</h1>
+            <div class="py-1 mb-3">
+                <a href="/user/login" class="icon-link" >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="bi" viewBox="0 0 16 16" style="transform: rotate(180deg)" aria-hidden="true">
+                        <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                    Back to login
+                </a>
+            </div>
+            <div class="b-example-divider"></div>
+            <div>
+            {{ form.input('name',
+                'User name',
+                'text',
+                'Enter user name',
+                wasValidated,
+                fieldName ) }}
+            {{ form.input('email',
+                'Email address',
+                'text',
+                'Enter email',
+                wasValidated,
+                fieldEmail ) }}
+            {{ form.input('password',
+                'Password',
+                'password',
+                'Enter password',
+                wasValidated,
+                fieldPassword ) }}
+                {{ form.input('password_confirm',
+                    'Password Confirmation',
+                    'password',
+                    'Enter password confirmation',
+                    wasValidated,
+                    fieldPasswordConfirm ) }}
+            </div>
+
+            <button class="btn btn-primary w-100 py-2" type="submit">Register</button>
+        </form>
+
+{% endblock %}
